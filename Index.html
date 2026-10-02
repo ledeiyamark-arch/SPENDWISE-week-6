@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpendWise Budget Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>SpendWise</h1>
+        <p>Smart Budget Tracking</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Budget Section -->
+        <section class="budget-section">
+
+            <h2>Set Your Budget</h2>
+
+            <form id="budgetForm">
+
+                <label for="budgetInput">
+                    Budget Amount:
+                </label>
+
+                <input
+                    type="number"
+                    id="budgetInput"
+                    placeholder="Enter budget amount"
+                    min="1"
+                    required
+                >
+
+                <button type="submit">
+                    Set Budget
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Budget</h3>
+                <p id="budgetDisplay">KSh 0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p id="expenseDisplay">KSh 0</p>
+            </div>
+
+            <div class="card">
+                <h3>Remaining Balance</h3>
+                <p id="balanceDisplay">KSh 0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Feedback -->
+        <section class="feedback">
+
+            <p id="message">
+                Set your budget to begin.
+            </p>
+
+        </section>
+
+
+        <!-- Expense Form -->
+        <section class="expense-section">
+
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm">
+
+                <label for="expenseName">
+                    Expense Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="e.g. Food"
+                    required
+                >
+
+
+                <label for="expenseAmount">
+                    Amount:
+                </label>
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Enter amount"
+                    min="1"
+                    required
+                >
+
+
+                <label for="expenseCategory">
+                    Category:
+                </label>
+
+                <select id="expenseCategory">
+
+                    <option value="Food">
+                        Food
+                    </option>
+
+                    <option value="Transport">
+                        Transport
+                    </option>
+
+                    <option value="Rent">
+                        Rent
+                    </option>
+
+                    <option value="Entertainment">
+                        Entertainment
+                    </option>
+
+                    <option value="Savings">
+                        Savings
+                    </option>
+
+                    <option value="Utilities">
+                        Utilities
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Add Expense
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Expense Records -->
+        <section class="expenses">
+
+            <h2>Expense Records</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="expenseTableBody">
+
+                    <!-- JavaScript will add records here -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
